@@ -15,5 +15,8 @@ kill -HUP $(pidof fastd)
 # Restart dnsmasq
 service dnsmasq restart
 
+# Reload Bind9
+service bind9 reload 
+
 # Restart dhcpd
 service isc-dhcp-server restart
