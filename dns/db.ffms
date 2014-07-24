@@ -17,14 +17,10 @@ $TTL 3600	; 1 Stunde
 node		A		10.43.0.1
 			AAAA    fd68:e2ea:a53::1
 
-;FF-Buildservice allgemein
-service		A		10.43.0.10
-			AAAA    fd68:e2ea:a53::10
+;Firmware Updates 
+firmware	A		10.43.0.11
+			AAAA    fd68:e2ea:a53::11
 
-;FF-Buildservice Firmware
-firmware		A		10.43.0.10
-			AAAA    fd68:e2ea:a53::10
-
-;FF-Buildservice Map
-map			A		10.43.0.10
-			AAAA    fd68:e2ea:a53::10
+;Freifunk Map 
+map			A		10.43.0.11
+			AAAA    fd68:e2ea:a53::11
