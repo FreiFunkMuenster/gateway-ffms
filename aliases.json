@@ -6,5 +6,9 @@
    "de:ad:be:ef:43:03" : {
       "name" : "gateway-warpzone",
       "vpn" : true
-   }
+   },
+   "de:ad:be:ef:43:11" : {
+      "name" : "ffms-services",
+      "vpn" : true
+   }   
 }
