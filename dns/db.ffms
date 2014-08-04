@@ -24,3 +24,7 @@ firmware	A		10.43.0.11
 ;Freifunk Map 
 map			A		10.43.0.11
 			AAAA    fd68:e2ea:a53::11
+
+;Freifunk NTP
+ntp			A		10.43.0.11
+			AAAA    fd68:e2ea:a53::11
