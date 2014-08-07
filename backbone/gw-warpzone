@@ -1,3 +1,3 @@
-#gw-warpzone
-key "1c24ede6eeb7222ebddb8336c498451a516b5536f30bfcbbefff83e3a5542d7a";
-remote ipv4 "78.46.108.150" port 14242;
+# gw-warpzone
+key "3a5c08f47bc7f62eff9a1e6ba072d2906f4ce5f628e81861ba93a9cd2a5dc9d9";
+remote ipv4 "78.46.108.156" port 14242;
