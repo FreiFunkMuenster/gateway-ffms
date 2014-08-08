@@ -1,3 +1,4 @@
 #gw-fusselkater
 key "071576a93dd3e7dcdd6e566024879dd01a118cddbc4258247dd825ad42351394";
-remote ipv4 "37.120.168.53" port 14242;
+remote ipv4 "fusselkater.gw.freifunk-muenster.de" port 14242;
+remote ipv6 "fusselkater.gw.freifunk-muenster.de" port 14242;
