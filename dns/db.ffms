@@ -17,19 +17,20 @@ $TTL 3600	; 1 Stunde
 node		A		10.43.0.1
 			AAAA    fd68:e2ea:a53::1
 
-;Firmware Updates 
-firmware	A		10.43.0.11
+;Freifunk NodeGame Highscore
+highscore	A		10.43.0.11
 			AAAA    fd68:e2ea:a53::11
 
 ;Freifunk Map 
 map			A		10.43.0.11
 			AAAA    fd68:e2ea:a53::11
 
+# v6 only
+;Firmware Updates 
+firmware	AAAA    fd68:e2ea:a53::11
+
 ;Freifunk NTP
-ntp			A		10.43.0.11
-			AAAA    fd68:e2ea:a53::11
+ntp			AAAA    fd68:e2ea:a53::11
 			
-;Freifunk NodeGame Highscore
-highscore	A		10.43.0.11
-			AAAA    fd68:e2ea:a53::11	
+
 			
