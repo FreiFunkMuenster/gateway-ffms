@@ -12,25 +12,18 @@ $TTL 3600	; 1 Stunde
 ;AUTHORATIVE NAMESERVER
 @			NS	localhost.
 
-
 ;Lokale Node
-node		A		10.43.0.1
-			AAAA    fd68:e2ea:a53::1
+node		AAAA    fd68:e2ea:a53::1
 
 ;Freifunk NodeGame Highscore
-highscore	A		10.43.0.11
-			AAAA    fd68:e2ea:a53::11
+highscore	AAAA    fd68:e2ea:a53::11
 
-;Freifunk Map 
+;Freifunk Map
 map			A		10.43.0.11
 			AAAA    fd68:e2ea:a53::11
 
-# v6 only
 ;Firmware Updates 
 firmware	AAAA    fd68:e2ea:a53::11
 
 ;Freifunk NTP
 ntp			AAAA    fd68:e2ea:a53::11
-			
-
-			
