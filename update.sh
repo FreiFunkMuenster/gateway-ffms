@@ -20,3 +20,6 @@ service bind9 reload
 
 # Restart dhcpd
 service isc-dhcp-server restart
+
+# Restart nrpe
+service nagios-nrpe-server restart
