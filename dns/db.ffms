@@ -1,7 +1,7 @@
 $ORIGIN ffms.
 $TTL 3600	; 1 Stunde
 @			IN SOA	localhost. freifunkmuenster.warpzone.ms. (
-				2014081601; serial: wird bei jeder Aenderung inkrementiert (Format: JJJJMMTTVV)
+				2014082301; serial: wird bei jeder Aenderung inkrementiert (Format: JJJJMMTTVV)
 				86400	; refresh: Sekundenabstand, in dem die Slaves anfragen, ob sich etwas geändert hat
 				7200	; retry: Sekundenabstand, in denen ein Slave wiederholt, falls sein Master nicht antwortet
 				3600000	; expire: wenn der Master auf einen Zonentransfer-Request nicht reagiert, deaktiviert ein Slave nach dieser Zeitspanne in Sekunden die Zone
@@ -27,3 +27,7 @@ firmware	AAAA    fd68:e2ea:a53::11
 
 ;Freifunk NTP
 ntp			AAAA    fd68:e2ea:a53::11
+
+;Icinga
+status			A		10.43.0.13
+			AAAA    fd68:e2ea:a53::13
