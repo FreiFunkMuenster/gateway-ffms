@@ -23,3 +23,8 @@ fusselkater 	A		37.120.168.53
 ;GW03
 commander1024	A		176.9.88.123
 				AAAA	2a01:4f8:150:8ff8::5
+
+;GW04
+fanlin			A		78.46.190.61
+				AAAA	fe80::21c:14ff:fe01:1f16
+				

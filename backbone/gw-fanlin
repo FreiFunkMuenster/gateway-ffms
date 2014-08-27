@@ -1,0 +1,4 @@
+#gw-fusselkater
+key "346234ecf552727233b406131c214b5b58ceb4b72b9503276aff419a02fc3137";
+remote ipv4 "fanlin.gw.freifunk-muenster.de" port 14242;
+remote ipv6 "fanlin.gw.freifunk-muenster.de" port 14242;
