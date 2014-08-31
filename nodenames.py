@@ -6,15 +6,13 @@ import json
 
 nodes = {}
 
-file = open('alfred_158.json')
-data = json.loads(file.read())
+output = subprocess.check_output(["alfred-json","-r","158","-f","json","-z"])
+data = json.loads(output.decode("utf-8"))
 
 for mac, node in data.items():
 
     try:
-#        print("A: " + node["hostname"])
         hostname = re.sub(r'[^a-z0-9_\-]',"", node["hostname"].lower()) 
-#        print("B: " + hostname)
         nodes[hostname] = node["network"]["addresses"][0]
     except: 
         pass
