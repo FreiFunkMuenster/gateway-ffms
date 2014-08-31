@@ -12,7 +12,7 @@ data = json.loads(output.decode("utf-8"))
 for mac, node in data.items():
 
     try:
-        hostname = re.sub(r'[^a-z0-9_\-]',"", node["hostname"].lower()) 
+        hostname = re.sub(r'[^a-z0-9\-]',"", node["hostname"].lower()) 
         nodes[hostname] = node["network"]["addresses"][0]
     except: 
         pass
