@@ -21,7 +21,7 @@ for mac, node in data.items():
 print("$ORIGIN nodes.ffms.")
 print("$TTL 3600	; 1 Stunde")
 print("@			IN SOA	localhost. info.freifunk-muenster.de. (")
-print("				" + time.strftime("%Y%m%d%H%M%S") + "; serial: wird bei jeder Aenderung inkrementiert (Format: JJJJMMTTVV)")
+print("				" + time.strftime("%Y%m%d%H%M") + "; serial: wird bei jeder Aenderung inkrementiert (Format: JJJJMMTTVV)")
 print("				86400	; refresh: Sekundenabstand, in dem die Slaves anfragen, ob sich etwas geaendert hat")
 print("				7200	; retry: Sekundenabstand, in denen ein Slave wiederholt, falls sein Master nicht antwortet")
 print("				3600000	; expire: wenn der Master auf einen Zonentransfer-Request nicht reagiert, deaktiviert ein Slave nach dieser Zeitspanne in Sekunden die Zone")
