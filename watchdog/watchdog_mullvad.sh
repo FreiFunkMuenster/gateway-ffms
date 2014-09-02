@@ -32,9 +32,9 @@ function log() {
 ### CODE ###
 
 separator
-log "Trying to get a reply from $destination_ip..."
 
 for destination_ip in ${destination_ips[@]}; do
+    log "Trying to get a reply from $destination_ip..."
 	ping -q -I $source_if -c1 -m $iptables_mark $destination_ip >& /dev/null
 	if [ $? -eq 0 ]; then
 		log "Got a reply from $destination_ip, so everything seems to be in order. Exiting."
