@@ -23,4 +23,4 @@ python /var/gateway-ffms/nodenames.py > /var/tmp/db.nodes.ffms
 service bind9 reload
 
 # Restart nrpe
-service nagios-nrpe-server restart
+service nagios-nrpe-server reload
