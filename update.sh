@@ -20,10 +20,7 @@ rm -f /var/tmp/db.nodes.ffms
 python /var/gateway-ffms/nodenames.py > /var/tmp/db.nodes.ffms
 
 # Reload Bind9
-service bind9 reload 
-
-# Restart dhcpd
-service isc-dhcp-server restart
+service bind9 reload
 
 # Restart nrpe
 service nagios-nrpe-server restart
