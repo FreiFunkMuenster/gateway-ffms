@@ -1,4 +1,4 @@
-#!/bin/sh 
+#!/bin/bash 
 # 
 # Initialisierung:
 #   cd /var
@@ -15,12 +15,25 @@ git pull
 # Reload Fastd Config
 kill -HUP $(pidof fastd)
 
-# Generate Bind DB with Node Names 
-rm -f /var/tmp/db.nodes.ffms
-python /var/gateway-ffms/nodenames.py > /var/tmp/db.nodes.ffms
-
 # Reload Bind9
 service bind9 reload
 
 # Restart nrpe
 service nagios-nrpe-server reload
+
+# Generate Bind DB with Node Names 
+python /var/gateway-ffms/nodenames.py > /var/tmp/db.nodes.ffms.new
+
+RETVAL=$?
+
+if [ $RETVAL -eq 0 ] 
+  then 
+  
+  # Copy generated output 
+  mv /var/tmp/db.nodes.ffms.new /var/tmp/db.nodes.ffms
+
+  # Reload Bind9
+  service bind9 reload
+
+fi 
+
