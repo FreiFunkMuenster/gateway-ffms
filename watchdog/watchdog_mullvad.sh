@@ -2,6 +2,9 @@
 
 ### CONFIGURATION ###
 
+# Set the paths, as cron will not do this
+export PATH=/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin
+
 # Set the number of the iptables mark, to catch the packets and route them through the tunnel
 iptables_mark=1
 
