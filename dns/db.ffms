@@ -31,3 +31,6 @@ ntp			AAAA    fd68:e2ea:a53::11
 ;Icinga
 status			A		10.43.0.13
 			AAAA    fd68:e2ea:a53::13
+
+;Flighview
+flightview	AAAA    fe80::ba27:ebff:fec0:46c0
