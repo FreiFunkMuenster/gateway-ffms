@@ -20,8 +20,11 @@ log_path='/var/log/watchdog_mullvad.log'
 ### FUNCTIONS ###
 
 function execute_on_fail() {
-	service fastd stop
-	echo "Stopped fastd for reasons!"
+	batctl gw off
+}
+
+function execute_on_recover() {
+        batctl gw server
 }
 
 function separator() {
@@ -40,7 +43,8 @@ for destination_ip in ${destination_ips[@]}; do
     log "Trying to get a reply from $destination_ip..."
 	ping -q -I $source_if -c1 -m $iptables_mark $destination_ip >& /dev/null
 	if [ $? -eq 0 ]; then
-		log "Got a reply from $destination_ip, so everything seems to be in order. Exiting."
+		log "Got a reply from $destination_ip, so everything seems to be in order. Running 'execute_on_recover'..."
+		execute_on_recover
 		exit 0
 	fi
 	sleep 1
@@ -48,5 +52,4 @@ done
 
 log "Did not get a reply from any destination ip, so there seems to be a problem. Running 'execute_on_fail'..."
 execute_on_fail
-log "Exiting."
 exit 1
