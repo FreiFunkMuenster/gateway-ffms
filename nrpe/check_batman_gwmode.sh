@@ -2,7 +2,7 @@
 
 # Check deb Batman-Gatewaymode
 
-output=$( batctl gw )
+output=$( sudo batctl gw )
 
 if [[ "$output" =~ ^server.* ]]
 then
