@@ -6,9 +6,9 @@ output=$( batctl gw )
 
 if [[ "$output" =~ ^server.* ]]
 then
-    echo "OK - $output"
+    echo "OK - server"
     exit 0
 else
-    echo "CRITICAL - $output"
+    echo "CRITICAL - off"
     exit 2
 fi
