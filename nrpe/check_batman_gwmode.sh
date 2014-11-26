@@ -1,6 +1,6 @@
 #!/bin/bash
 
-# Check deb Batman-Gatewaymode
+# Check des Batman-Gatewaymode
 
 output=$( sudo batctl gw )
 
