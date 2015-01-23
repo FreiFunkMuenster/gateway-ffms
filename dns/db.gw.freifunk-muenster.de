@@ -1,7 +1,7 @@
 $ORIGIN gw.freifunk-muenster.de.
 $TTL 3600	; 1 Stunde
 @			IN SOA	localhost. info.freifunk-muenster.de. (
-				2014112401; serial: wird bei jeder Aenderung inkrementiert (Format: JJJJMMTTVV)
+				2015012301; serial: wird bei jeder Aenderung inkrementiert (Format: JJJJMMTTVV)
 				86400	; refresh: Sekundenabstand, in dem die Slaves anfragen, ob sich etwas geändert hat
 				7200	; retry: Sekundenabstand, in denen ein Slave wiederholt, falls sein Master nicht antwortet
 				3600000	; expire: wenn der Master auf einen Zonentransfer-Request nicht reagiert, deaktiviert ein Slave nach dieser Zeitspanne in Sekunden die Zone
@@ -13,8 +13,8 @@ $TTL 3600	; 1 Stunde
 @			NS	localhost.
 
 ;GW01
-fanlin          A       89.163.225.52
-                AAAA    2001:4ba0:ffec:136::2
+fanlin          A       93.186.196.76
+                AAAA    2001:4ba0:fff1:49::1
 
 ;GW02
 fusselkater 	A		37.120.168.53
