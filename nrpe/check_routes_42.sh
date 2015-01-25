@@ -2,9 +2,9 @@
 
 # Check der Routingtabelle 42
 
-output=$( ip route show table 42 | tr "\n" "#" )
+output=$( ip route show table 42 | grep default | tr "\n" "#" )
 
-if [[ "#$output" =~ ^.*[v][i][a].*[d][e][v].*[#].*[v][i][a].*[d][e][v].*[#]$ ]]
+if [[ "#$output" =~ ^.*[t][u][n][-][f][f][r][l][-].*$ ]]
 then
     echo "OK - $output"
     exit 0
