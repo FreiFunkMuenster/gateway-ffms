@@ -13,8 +13,8 @@ $TTL 3600	; 1 Stunde
 @			NS	localhost.
 
 ;GW01
-fanlin          A       93.186.196.76
-                AAAA    2001:4ba0:fff1:49::1
+fanlin          A       89.163.221.125 
+                AAAA    2001:4ba0:fff1:49::2
 
 ;GW02
 fusselkater 	A		37.120.168.53
