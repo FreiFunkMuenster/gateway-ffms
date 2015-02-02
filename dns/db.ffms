@@ -13,7 +13,7 @@ $TTL 3600	; 1 Stunde
 @			NS	localhost.
 
 ;Lokale Node
-node		AAAA    fd68:e2ea:a53::1
+node		A	10.43.0.1
 
 ;Freifunk NodeGame Highscore
 highscore	AAAA    fd68:e2ea:a53::11
