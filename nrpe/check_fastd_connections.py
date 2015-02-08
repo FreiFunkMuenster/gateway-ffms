@@ -48,15 +48,11 @@ try:
         # return Warning
         sys.exit(1)
     else:
-      # return OK
-      sys.exit(0)
+        # return OK
+        sys.exit(0)
 
 except socket.error, msg:
     print msg
-    sys.exit(2)
-
-except: 
-    print "Unknown Error"
     sys.exit(2)
 
 	
