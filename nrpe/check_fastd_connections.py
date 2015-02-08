@@ -15,12 +15,12 @@ server_address = '/tmp/fastd-status'
 
 try:
     # Open socket 
-	sock.connect(server_address)
+    sock.connect(server_address)
 
     received_count = 1
     received_data = ""
 
-	# read data from socket 
+    # read data from socket 
     while received_count > 0:
         data = sock.recv(1024)
         received_count = len(data)
@@ -41,7 +41,7 @@ try:
 	# pront results 
     print "Fastd Connections %d " % connections
 	
-    if connections < 2:
+    if connections < 10:
         # return Critical
         sys.exit(2)
     elif connections < 50:
