@@ -41,10 +41,10 @@ try:
 	# pront results 
     print "Fastd Connections %d " % connections
 	
-    if connections < 10:
+    if connections < 2:
         # return Critical
         sys.exit(2)
-    elif connections < 50:
+    elif connections < 30:
         # return Warning
         sys.exit(1)
     else:
