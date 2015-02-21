@@ -1,6 +1,5 @@
-$ORIGIN .
 $TTL 3600       ; 1 Stunde
-gw.freifunk-muenster.de         IN SOA  ns1.freifunk-muenster.de. info.freifunk-muenster.de. (
+@                               IN SOA  ns1.freifunk-muenster.de. info.freifunk-muenster.de. (
                                 2015022101 ; serial: wird bei jeder Aenderung inkrementiert (Format: JJJJMMTTVV)
                                 86400   ; refresh: Sekundenabstand, in dem die Slaves anfragen, ob sich etwas ge�ndert hat
                                 7200    ; retry: Sekundenabstand, in denen ein Slave wiederholt, falls sein Master nicht antwortet
@@ -15,12 +14,12 @@ gw.freifunk-muenster.de         IN SOA  ns1.freifunk-muenster.de. info.freifunk-
 
 ;GW01
 fanlin                          A       89.163.221.125 
-                                AAAA    2001:4ba0:fff1:49::2
+fanlin                          AAAA    2001:4ba0:fff1:49::2
 
 ;GW02
 fusselkater                     A       37.120.168.53
-                                AAAA    2a03:4000:6:500e::1
+fusselkater                     AAAA    2a03:4000:6:500e::1
 
 ;GW03
 commander1024                   A       176.9.88.123
-                                AAAA    2a01:4f8:150:8ff8::5
+commander1024                   AAAA    2a01:4f8:150:8ff8::5
