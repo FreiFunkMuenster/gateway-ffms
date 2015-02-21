@@ -1,25 +1,26 @@
-$ORIGIN gw.freifunk-muenster.de.
+$ORIGIN .
 $TTL 3600       ; 1 Stunde
-@                       IN SOA  localhost. info.freifunk-muenster.de. (
-                                2015012301; serial: wird bei jeder Aenderung inkrementiert (Format: JJJJMMTTVV)
+gw.freifunk-muenster.de         IN SOA  ns1.freifunk-muenster.de. info.freifunk-muenster.de. (
+                                2015022101 ; serial: wird bei jeder Aenderung inkrementiert (Format: JJJJMMTTVV)
                                 86400   ; refresh: Sekundenabstand, in dem die Slaves anfragen, ob sich etwas ge�ndert hat
                                 7200    ; retry: Sekundenabstand, in denen ein Slave wiederholt, falls sein Master nicht antwortet
                                 3600000 ; expire: wenn der Master auf einen Zonentransfer-Request nicht reagiert, deaktiviert ein Slave nach dieser Zeitspanne in Sekunden die Zone
                                 172800  ; TTL fuer negatives caching: Analog zum Standard-Caching wird im Cache vermerkt, dass dem zust�ndigen Nameserver der Name unbekannt war. Da f�r einen nicht vorhandenen Namen keine TTL existiert, steht sie hier.
                                 )
 
-
 ;AUTHORATIVE NAMESERVER
-@                       NS      localhost.
+                                NS      ns1.freifunk-muenster.de.
+                                NS      ns2.freifunk-muenster.de.
+                                NS      ns3.freifunk-muenster.de.
 
 ;GW01
-fanlin          A       89.163.221.125 
-                AAAA    2001:4ba0:fff1:49::2
+fanlin                          A       89.163.221.125 
+                                AAAA    2001:4ba0:fff1:49::2
 
 ;GW02
-fusselkater     A               37.120.168.53
+fusselkater                     A       37.120.168.53
                                 AAAA    2a03:4000:6:500e::1
 
 ;GW03
-commander1024   A               176.9.88.123
+commander1024                   A       176.9.88.123
                                 AAAA    2a01:4f8:150:8ff8::5
