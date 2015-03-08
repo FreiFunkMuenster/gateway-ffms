@@ -4,6 +4,11 @@ import re
 import subprocess
 import json
 
+
+# Our IPv6 prefix
+prefix6 = '2a03:2260:115:0:'
+
+
 nodes = {}
 
 output = subprocess.check_output(["alfred-json","-r","158","-f","json","-z"])
@@ -13,7 +18,9 @@ for mac, node in data.items():
 
     try:
         hostname = re.sub(r'[^a-z0-9\-]',"", node["hostname"].lower()) 
-        nodes[hostname] = node["network"]["addresses"][0]
+        for address in node["network"]["addresses"]:
+            if address.lower().startswith(prefix6):
+                nodes[hostname] = address
     except: 
         pass
 
@@ -42,4 +49,3 @@ for hostname in nodes.keys():
     print("")
 
 print("")
-
