@@ -9,7 +9,7 @@
 output=$( sudo batctl gwl | tr "\n" "#" )
 count=$( sudo batctl gwl | wc -l )
 
-if [[ $count -eq 3 ]]
+if [[ $count -eq 4 ]]
 then
     # Expected Number of Gateways 
 	
@@ -17,7 +17,7 @@ then
     exit 0
 fi
 
-if [[ $count -lt 3 ]]
+if [[ $count -lt 4 ]]
 then
     # Number of Gateways is lesser than expected 
 	# Can be a Gateway fail 
