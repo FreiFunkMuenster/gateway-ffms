@@ -16,7 +16,7 @@ $TTL 3600	; 1 Stunde
 node                            A       10.43.0.1
 
 ;Firmware Updates 
-firmware                        AAAA    2a03:2260:115::4
+firmware                        AAAA    2a03:2260:115::15
 
 ;Icinga
 status                          CNAME   monitoring.freifunk-muenster.de.
