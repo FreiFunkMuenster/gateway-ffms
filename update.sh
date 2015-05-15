@@ -15,8 +15,6 @@ git pull
 # Reload Fastd Config
 kill -HUP $(pidof fastd)
 
-# Reload Bind9
-service bind9 reload
 
 # Restart nrpe
 service nagios-nrpe-server reload
