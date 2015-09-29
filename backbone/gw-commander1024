@@ -1,4 +1,0 @@
-#gw-commander1024
-key "9bf14cf6faa8bc0bc87e45b109f065339551cf4ab63a668c1a90897f05eceb36";
-remote ipv4 "commander1024.gw.freifunk-muenster.de" port 14242;
-remote ipv6 "commander1024.gw.freifunk-muenster.de" port 14242;
